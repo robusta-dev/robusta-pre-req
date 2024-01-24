@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pre-req-runner
+  namespace: robusta-pre-req
+spec:
+  ttlSecondsAfterFinished: 1000
+  template:
+    spec:
+      serviceAccountName: pre-req-runner-service-account
+      containers:
+      - name: pre-req-runner
+        image: us-central1-docker.pkg.dev/genuine-flight-317411/devel/robusta-pre-requisites:1.0
+      restartPolicy: Never
+  backoffLimit: 1

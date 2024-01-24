@@ -1,0 +1,6 @@
+requests
+hikaru-model-26==1.1.1
+ruamel.yaml.clib==0.2.8
+pydantic==1.8.1
+robusta-cli==0.10.27
+kubernetes==26.1.0
